@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/app/src/androidTest/java/com/walu/loginsignupsql/ExampleInstrumentedTest.kt;C:/Users/denni/LoginSignupSql/app/src/main/java/com/walu/loginsignupsql/MainActivity.kt;C:/Users/denni/LoginSignupSql/app/src/test/java/com/walu/loginsignupsql/ExampleUnitTest.kt;C:/Users/denni/LoginSignupSql/app/build.gradle.kts;C:/Users/denni/LoginSignupSql/build.gradle.kts;C:/Users/denni/LoginSignupSql/settings.gradle.kts" />
+  </component>
+</project>
