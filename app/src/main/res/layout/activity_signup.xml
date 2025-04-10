@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/signupbkg"
     android:padding="16dp"
-    tools:context=".SignupActivity">
+    tools:context=".ui.SignupActivity">
 
     <EditText
         android:layout_width="0dp"

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -50,4 +51,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation  (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.kotlinx.coroutines.android)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.androidx.activity.ktx)
+    implementation (libs.androidx.room.runtime)
+    implementation (libs.androidx.work.runtime.ktx)
+    implementation (libs.picasso)
+    implementation (libs.androidx.cardview)
+    implementation (libs.androidx.recyclerview)
+    kapt (libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    implementation (libs.gson)
 }
