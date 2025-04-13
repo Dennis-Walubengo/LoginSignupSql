@@ -1,4 +1,4 @@
-This is a Notes App that allows you to make quick notes at any given time and anywhere for easy reference. 
+This is a Notes App that allows you to make quick notes at any given time and anywhere for easy reference.
 The functionality of the app is that it allows a user to create notes by Entering the title and entering the notes. 
 The app also allows for editing of notes as well as deleting the notes. 
 The app has the following features:
