@@ -9,4 +9,4 @@ The app has the following features:
 5. Edit notes
 6. Delete notes
 
-The app is implemented using SQLite database and is hoted locally on you mobile phone once installed.
+The app is implemented using SQLite database and is hosted locally on you mobile phone once installed.
