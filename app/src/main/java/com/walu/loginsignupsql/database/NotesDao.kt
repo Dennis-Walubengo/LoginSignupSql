@@ -2,6 +2,7 @@ package com.walu.loginsignupsql.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -18,9 +19,11 @@ interface NotesDao {
 
     @Query("SELECT * FROM Notes Where title= :title LIMIT 1")
     fun getNotesByTitle(title: String): LiveData<NotesData>
+
     @Update
     suspend fun updateNotes(notesData: NotesData)
 
-
+    @Delete
+    suspend fun deleteNote(notesData: NotesData)
 
 }

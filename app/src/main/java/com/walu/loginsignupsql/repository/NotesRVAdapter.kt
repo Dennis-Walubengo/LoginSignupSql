@@ -4,13 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.walu.loginsignupsql.databinding.NoteListBinding
 import com.walu.loginsignupsql.model.NotesData
 import com.walu.loginsignupsql.ui.EditNotesActivity
 import com.walu.loginsignupsql.ui.NotesDetailsActivity
 
-class NotesRVAdapter(private var notesList: List<NotesData>, val context: Context) : RecyclerView.Adapter<NotesViewHolder>() {
+class NotesRVAdapter(private var notesList: List<NotesData>, val context: Context, val notesViewModel: NotesViewModel) : RecyclerView.Adapter<NotesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         val binding = NoteListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -36,6 +37,10 @@ class NotesRVAdapter(private var notesList: List<NotesData>, val context: Contex
             intent.putExtra("note_title", currentNote.title)
             intent.putExtra("note_content", currentNote.content)
             context.startActivity(intent)
+        }
+        binding.deleteIcon.setOnClickListener {
+            notesViewModel.deleteNote(currentNote)
+            Toast.makeText(context, "Note deleted", Toast.LENGTH_SHORT).show()
         }
     }
 

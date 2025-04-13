@@ -14,6 +14,11 @@ class NotesRepository {
             database.notesDao().insertNote(notes)
         }
     }
+    suspend fun deleteNote(note: NotesData) {
+        withContext(Dispatchers.IO) {
+            database.notesDao().deleteNote(note)
+        }
+    }
     suspend fun updateNote(notes: NotesData) {
         withContext(Dispatchers.IO) {
             database.notesDao().updateNotes(notes)

@@ -19,8 +19,8 @@ class DatabaseHelper(private val context: Context):
     override fun onCreate(db: SQLiteDatabase?) {
         val createTableQuery = ("CREATE TABLE $TABLE_NAME (" +
                 "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "$COLUMN_USERNAME TEXT, " +
-                "$COLUMN_PASSWORD, TEXT)")
+                "$COLUMN_USERNAME TEXT CHECK (length($COLUMN_USERNAME) = 12), " +
+                "$COLUMN_PASSWORD TEXT CHECK (length($COLUMN_PASSWORD) >= 8))")
         db?.execSQL(createTableQuery)
     }
 
@@ -29,6 +29,7 @@ class DatabaseHelper(private val context: Context):
         db?.execSQL(dropTableQuery)
         onCreate(db)
     }
+
     fun insertUser(username: String, password: String): Long{
         val values = ContentValues().apply {
             put(COLUMN_USERNAME, username)

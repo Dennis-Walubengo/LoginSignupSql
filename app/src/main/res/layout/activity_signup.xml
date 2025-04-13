@@ -6,65 +6,81 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signupbkg"
+    android:background="@drawable/login"
     android:padding="16dp"
     tools:context=".ui.SignupActivity">
 
     <EditText
+        android:id="@+id/signupUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/signupUsername"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_border"
         android:hint="Username"
         android:padding="12dp"
-        android:background="@drawable/edittext_border"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="450dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/signupPassword"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
     <EditText
+        android:id="@+id/signupPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/signupPassword"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_border"
         android:hint="Password"
+        android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:padding="12dp"
-        android:background="@drawable/edittext_border"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupUsername"
-        app:layout_constraintBottom_toTopOf="@+id/signupButton"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupUsername" />
+
     <Button
+        android:id="@+id/signupButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/signupButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:text="SIGNUP"
         android:textColor="@color/black"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginRedirect"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupPassword"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupPassword" />
+
     <TextView
+        android:id="@+id/loginRedirect"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/loginRedirect"
-        android:text="Already registered? Login"
-        android:textSize="18sp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
+        android:text="Already registered? Login"
         android:textColor="@color/black"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupButton"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="16dp"
+        android:text="SIGN UP"
+        android:textColor="@color/green"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

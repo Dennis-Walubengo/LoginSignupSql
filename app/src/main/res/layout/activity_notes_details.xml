@@ -27,11 +27,10 @@
 
         <TextView
             android:id="@+id/tvContent"
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:ellipsize="end"
-            android:maxLines="2"
             android:text="Short preview of note content..."
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp" />

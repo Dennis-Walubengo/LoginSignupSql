@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        notesAdapter = NotesRVAdapter(emptyList(), this)
+        notesAdapter = NotesRVAdapter(emptyList(), this,notesViewModel)
         binding.rvNotes.layoutManager = LinearLayoutManager(this)
         binding.rvNotes.adapter = notesAdapter
 
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayNotes(notesList: List<NotesData>) {
         // Create and set the adapter with updated notes list
-        val notesAdapter = NotesRVAdapter(notesList, this)
+        val notesAdapter = NotesRVAdapter(notesList, this,notesViewModel)
         binding.rvNotes.layoutManager = LinearLayoutManager(this)
         binding.rvNotes.adapter = notesAdapter
 

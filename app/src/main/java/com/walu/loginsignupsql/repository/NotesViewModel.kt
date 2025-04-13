@@ -8,7 +8,6 @@ import kotlinx.coroutines.launch
 
 class NotesViewModel:ViewModel() {
     val notesRepo= NotesRepository()
-    lateinit var notesLiveData:LiveData<NotesData>
     fun saveNote(notesData: NotesData){
         viewModelScope.launch {
             notesRepo.saveNote(notesData)
@@ -20,6 +19,9 @@ class NotesViewModel:ViewModel() {
             notesRepo.updateNote(note)
         }
 
+    }
+    fun deleteNote(note: NotesData) = viewModelScope.launch {
+        notesRepo.deleteNote(note)
     }
 
     fun getNotes():LiveData<List<NotesData>>{
